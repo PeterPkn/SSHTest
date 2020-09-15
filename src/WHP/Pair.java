@@ -3,6 +3,7 @@ package WHP;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
 public class Pair implements Comparable<Pair>{
     private int num1, num2, difference;
@@ -20,8 +21,19 @@ public class Pair implements Comparable<Pair>{
         return difference;
     }
 
-    public int[] getPair() {
-        return new int[]{num1, num2};
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pair pair = (Pair) o;
+        return num1 == pair.num1 &&
+                num2 == pair.num2 &&
+                difference == pair.difference;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(num1, num2, difference);
     }
 
     @Override
