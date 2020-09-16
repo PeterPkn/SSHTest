@@ -12,7 +12,7 @@ public class JUnit {
     @Test
     public void gibtRichtigeAntwort(){
         int[] input = { 1, 2, 5, 3, 4 };
-        assertEquals(Main.getBiggestDiffernz(input), new Pair(1,5));
+        assertEquals(new Pair(1,5), Main.getBiggestDiffernz(input));
 
     }
     @Test
@@ -22,14 +22,16 @@ public class JUnit {
         Assertions.assertThrows(IllegalArgumentException.class, ()->{Main.getBiggestDiffernz(new int[]{1});});
     }
     @Test
-    public void richtigeFunktionmitMinuszahlen(){
-        int[] input = { 1, 2, 5, 3, 4,-7 };
-        assertEquals(Main.getBiggestDiffernz(input), new Pair(5,-7));
-    }
-    @Test
     public void ergebnisMitNull(){
-        int[] input = { 0,0,0,0,0 };
-        assertEquals(Main.getBiggestDiffernz(input), new Pair(0,0));
+        Pair.clearList();
+        int[] input1 = {0,0,0,0,0};
+        assertEquals(new Pair(0,0), Main.getBiggestDiffernz(input1));
     }
 
+    @Test
+    public void richtigeFunktionmitMinuszahlen(){
+        Pair.clearList();
+        int[] input = { 1, 2, 5, 3, 4,-7 };
+        assertEquals(new Pair(5,-7), Main.getBiggestDiffernz(input));
+    }
 }

@@ -21,6 +21,10 @@ public class Pair implements Comparable<Pair>{
         return difference;
     }
 
+    public static void clearList(){
+        Pair.numSet.clear();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
