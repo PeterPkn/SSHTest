@@ -4,10 +4,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //int[] input = {1, 2, 5, 3,9, 4};
-        //getBiggestDiffernz(input);
-
-        //System.out.println(Arrays.toString(getBiggestDiffernz(input)));
+        Bundesland.getInfo();
     }
 
     public static Pair getBiggestDiffernz(int[] data){
