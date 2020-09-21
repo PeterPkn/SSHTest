@@ -1,10 +1,8 @@
-package WHP;
+package u00_whp;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 
 public class Bundesland {
     private static final List<Bundesland> BUNDESLAENDER = Arrays.asList(
@@ -30,20 +28,22 @@ public class Bundesland {
     }
 
     public static void getInfo(){
-        List<Bundesland> kleineStaedte = new ArrayList<>();
+        List<String> kleineStaedte = new ArrayList<>();
 
         List<Integer> namenLaenge = new ArrayList<>();
 
-        BUNDESLAENDER.forEach((Bundesland b)->{if(b.einwohner<500000)kleineStaedte.add(b);});
+        BUNDESLAENDER.forEach((Bundesland b)->{if(b.einwohner<500000)kleineStaedte.add(b.name);});
 
-        kleineStaedte.forEach((Bundesland b)->{
-            System.out.println(b.name);
-        });
+
+
+
+        System.out.println(Arrays.toString(kleineStaedte.toArray()));
 
         System.out.println(BUNDESLAENDER.stream().max((Bundesland b1, Bundesland b2)->{return (int)(b1.flaeche-b2.flaeche);}).get().flaeche);
 
         BUNDESLAENDER.forEach((Bundesland b)->{namenLaenge.add(b.landeshauptstadt.length());});
 
-        namenLaenge.forEach(System.out::println);
+
+        System.out.println(Arrays.toString(namenLaenge.toArray()));
     }
 }
