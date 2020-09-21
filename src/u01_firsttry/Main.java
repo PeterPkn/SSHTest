@@ -6,6 +6,7 @@ public class Main {
     }
 
     public static int count(String text){
+        if(text.trim().isBlank())return 0;
         text = text.replaceAll("[^A-Za-z<>\\s]"," ");
 
         text = text.replaceAll("<(.*?)>"," ");
