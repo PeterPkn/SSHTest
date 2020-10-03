@@ -2,7 +2,7 @@ package u01_firsttry;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
-import static u01_firsttry.Main.count;
+import static u01_enum1.Main.count;
 
 import org.junit.jupiter.api.Test;
 
