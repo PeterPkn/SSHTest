@@ -7,7 +7,11 @@ import static u01_firsttry.Main.count;
 
 import org.junit.jupiter.api.Test;
 
+
 public class Tests {
+    /**
+     * Test Klasse mit Test Methoden
+     */
     @Test
     public void easytests(){
         assertSame(0, count(""));

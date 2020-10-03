@@ -6,10 +6,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
+    /**
+     * Main Klasse mit Main Methode
+     * @param args
+     */
     public static void main(String[] args) {
         System.out.println(count(" eins<img alt=\"<bild \\\" keinwort> keinwort\" keinwort>zwei"));
     }
-
+    /**
+     * Gibt die Anzahl an Wörtern in einem String an die keine HTML Tags sind.
+     * @param text The Text to count the words from.
+     * @return int
+     */
     public static int count(String text){
         //<(.*[^\]"(.*)[^\]".*)>4
         //<(.*[^\\]"(.*)[^\\]?".*)*>

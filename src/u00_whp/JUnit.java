@@ -9,6 +9,9 @@ import org.junit.jupiter.api.Test;
 
 
 public class JUnit {
+    /**
+     * Test Klasse mit Test Methoden
+     */
 
     @Test
     public void gibtRichtigeAntwort(){
