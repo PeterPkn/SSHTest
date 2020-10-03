@@ -1,3 +1,4 @@
+//Peter Bezak 4BN
 package u01_enum1;
 
 public class Main {

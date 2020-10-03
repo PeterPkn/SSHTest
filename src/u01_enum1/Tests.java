@@ -1,5 +1,5 @@
 //Peter Bezak 4BN
-package u01_firsttry;
+package u01_enum1;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
@@ -92,3 +92,4 @@ public class Tests {
     }
 
 }
+
