@@ -1,6 +1,9 @@
 package u02_enum2;
 
 public enum States {
+    /**
+     * Enum das alle States enthält
+     */
     IN_WORD{
         public States handleChar(IncrementWord context, char ch) {
             States retState = this;
@@ -57,5 +60,11 @@ public enum States {
         }
     };
 
+    /**
+     *
+     * @param context Interface mit nötigen Methoden für das bearbeiten der Character
+     * @param ch Der zu bearbeitende Charachter
+     * @return Gibt den State zurück zu dem die Statemachine nach diesem Character wechseln soll.
+     */
     public abstract States handleChar(IncrementWord context, char ch);
 }
